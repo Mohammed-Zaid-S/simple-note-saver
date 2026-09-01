@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Note.title }} - Note Saver</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container single-note">
+        <div class="note-header">
+            <h1>{{ Note.title }}</h1>
+            {% if Note.important %}
+                <span class="badge">Important</span>
+            {% endif %}
+        </div>
+        <div class="note-body">
+            <p>{{ Note.Note }}</p>
+        </div>
+        <br>
+        <a href="/" class="btn secondary-btn">&larr; Back to Notes</a>
+    </div>
+</body>
+</html>

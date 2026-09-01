@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Note</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container form-container">
+        <h1>Create a New Note</h1>
+        <form action="/newNote" method="post" class="note-form">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required placeholder="Note Title">
+            
+            <label for="note_content">Note Content</label>
+            <textarea id="note_content" name="note_content" rows="6" required placeholder="Write your thoughts..."></textarea>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="important" name="important" value="true">
+                <label for="important">Mark as Important</label>
+            </div>
+            
+            <div class="actions">
+                <button type="submit" class="btn primary-btn">Save Note</button>
+                <a href="/" class="btn secondary-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

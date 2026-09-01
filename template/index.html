@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note Saver</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Notes</h1>
+            <a href="/newNote" class="btn primary-btn">+ Create New Note</a>
+        </header>
+        <div class="notes-grid">
+            {% for n in note %}
+            <div class="note-card {% if n.important %}important-note{% endif %}">
+                <a href="/{{ n.title }}" class="note-link">
+                    <h2>{{ n.title }}</h2>
+                </a>
+                <form action="/delete/{{ n.title }}" method="post" class="delete-form">
+                    <button type="submit" class="btn delete-btn">Delete</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
