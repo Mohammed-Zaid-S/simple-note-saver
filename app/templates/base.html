@@ -6,6 +6,13 @@
     <title>{% block title %}Note Saver{% endblock %}</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
+<header>
+    <h1>My Notes</h1>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="/newNote" class="btn primary-btn">+ Create New Note</a>
+        <a href="/logout" class="btn secondary-btn">Logout</a>
+    </div>
+</header>
 <body>
     {% block content %}{% endblock %}
 </body>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - Note Saver{% endblock %}
+
+{% block content %}
+<div class="container form-container">
+    <h1>Create an Account</h1>
+    <form action="/signup" method="post" class="note-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required placeholder="Choose a username">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Choose a password">
+        
+        <div class="actions">
+            <button type="submit" class="btn primary-btn">Sign Up</button>
+            <a href="/login" class="btn secondary-btn">Already have an account? Login</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
